@@ -44,6 +44,7 @@ public class Main {
         List<Integer> numbers = new ArrayList(Arrays.asList(1000003, 2000003, 4000037, 8000009, 16000057, 32000011, 64000031, 128000003, 256000001, 512000009, 1024000009, 2048000011));
 
 
+
         long startTime;
         long endTime;
         long durationPart1;
@@ -70,6 +71,8 @@ public class Main {
             endTime = System.nanoTime( );
             durationPart1 = (endTime - startTime);
 
+            System.out.println("n = " + num.toString( ) + ", est premier : " + isPrime);
+
             startTime = System.nanoTime( );
             isPrime = premierPart2(num);
             endTime = System.nanoTime( );
@@ -79,8 +82,6 @@ public class Main {
             isPrime = premierPart3(num);
             endTime = System.nanoTime( );
             durationPart3 = (endTime - startTime);
-
-            System.out.println(num.toString( ) + " " + durationPart1 + " " + durationPart2 + " " + durationPart3);
 
             csvWriter.append(num.toString( ));
             csvWriter.append(",");
