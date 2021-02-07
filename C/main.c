@@ -75,7 +75,7 @@ int premierPart1(int n) {
 
 // la fonctin retourne 1 si n est premier et 0 sinon
 int premierPart2(int n) {
-    for (int i=2; i<(n/2); i++) {
+    for (int i=2; i<=(n/2); i++) {
         if (n % i == 0) {
             printf("%d n'est pas premier\n", n);
             return 0;
@@ -87,7 +87,7 @@ int premierPart2(int n) {
 
 // la fonctin retourne 1 si n est premier et 0 sinon
 int premierPart3(int n) {
-    for (int i=2; i<sqrt(n); i++) {
+    for (int i=2; i<=sqrt(n); i++) {
         if (n % i == 0) {
             printf("%d n'est pas premier\n", n);
             return 0;

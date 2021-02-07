@@ -19,7 +19,7 @@ public class Main {
 
     public static boolean premierPart2(int n) {
 
-        for (int i = 2; i < (n / 2); i++) {
+        for (int i = 2; i <= (n / 2); i++) {
             if (n % i == 0) {
                 return false;
             }
@@ -30,7 +30,7 @@ public class Main {
 
     public static boolean premierPart3(int n) {
 
-        for (int i = 2; i < Math.sqrt(n); i++) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
                 return false;
             }
@@ -71,8 +71,6 @@ public class Main {
             endTime = System.nanoTime( );
             durationPart1 = (endTime - startTime);
 
-            System.out.println("n = " + num.toString( ) + ", est premier : " + isPrime);
-
             startTime = System.nanoTime( );
             isPrime = premierPart2(num);
             endTime = System.nanoTime( );
@@ -82,6 +80,8 @@ public class Main {
             isPrime = premierPart3(num);
             endTime = System.nanoTime( );
             durationPart3 = (endTime - startTime);
+
+            System.out.println("n = " + num.toString( ) + ", est premier : " + isPrime);
 
             csvWriter.append(num.toString( ));
             csvWriter.append(",");
