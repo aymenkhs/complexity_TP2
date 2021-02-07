@@ -106,7 +106,7 @@ int writeCSV(int * tab1, double * results_part1, double * results_part2, double 
         return 0;
     }
 
-    fprintf(fp,"nb, T_part1, T_part2, T_part3");
+    fprintf(fp,"nb,T_part1,T_part2,T_part3");
     for(int i=0; i<12; i++){
         fprintf(fp,"\n%d,%.10lf,%.10lf,%.10lf", tab1[i], results_part1[i], results_part2[i], results_part3[i]);
     }

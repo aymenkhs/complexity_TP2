@@ -65,7 +65,7 @@ def graph_langage(data, language):
 
 def graph_function(list_values):
     result = [6*value-10 for value in list_values]
-    ax =  sns.lineplot(x=list_values, y=list_values)
+    ax =  sns.lineplot(x=list_values, y=result)
     ax.legend(["ctp(n)"])
     ax.set(xlabel='n', ylabel='nombre d\'iterations', title='Gp partie 1')
     plt.tight_layout()
